@@ -10,7 +10,7 @@ class UserRepository {
 
     }
 
-    fun getUser(userId: String): User {
-        return User()
+    fun getUser(userId: String): User? {
+        return null
     }
 }

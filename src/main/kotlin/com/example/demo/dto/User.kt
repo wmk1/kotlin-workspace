@@ -9,8 +9,8 @@ class User {
     val userId: String = ""
     val firstName: String = ""
     val lastName: String = ""
-    var addresses = setOf<String>()
-    var contacts = setOf<String>()
+    var addresses = setOf<Address>()
+    var contacts = setOf<Contact>()
 
 
 }

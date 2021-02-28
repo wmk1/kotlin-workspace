@@ -22,7 +22,7 @@ class UserService {
         userRepository.addUser(user)
     }
 
-    fun updateUser(userId: String, addresses: Set<String>, contacts: Set<String>) {
+    fun updateUser(userId: String, addresses: Set<Address>, contacts: Set<Contact>) {
         val user = userRepository.getUser(userId)
         user.addresses = addresses
         user.contacts = contacts
@@ -30,7 +30,7 @@ class UserService {
 
     fun getContactByType(userId: String, contactType: String): Set<Contact?>? {
         val user: User = userRepository.getUser(userId)
-        val contacts: Set<Contact> = user.addresses
+        val contacts: Set<Contact> = user.contacts
         return contacts.stream()
             .filter { c: Contact -> c.type == contactType }
             .collect(Collectors.toSet())
@@ -38,9 +38,9 @@ class UserService {
 
     fun getAddressByRegion(userId: String, state: String): MutableSet<Any>? {
         val user: User = userRepository.getUser(userId)
-        val addresses: Set<Address> = user.getAddresses()
+        val addresses: Set<Address> = user.addresses
         return addresses.stream()
-            .filter(Predicate<Address> { a: Address -> a.getState().equals(state) })
+            .filter(Predicate<Address> { a: Address -> a.state.equals(state) })
             .collect(Collectors.toSet<Any>())
     }
 }
