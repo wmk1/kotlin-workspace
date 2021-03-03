@@ -1,4 +1,4 @@
-package com.example.demo.dto
+package com.example.demo.cqrs.dto
 
 class Contact {
 

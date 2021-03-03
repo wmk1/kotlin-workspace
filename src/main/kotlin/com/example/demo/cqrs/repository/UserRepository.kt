@@ -1,6 +1,6 @@
-package com.example.demo.repository
+package com.example.demo.cqrs.repository
 
-import com.example.demo.dto.User
+import com.example.demo.cqrs.dto.User
 
 class UserRepository {
 

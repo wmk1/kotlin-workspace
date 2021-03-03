@@ -1,11 +1,11 @@
-package com.example.demo.service
+package com.example.demo.cqrs.service
 
-import com.example.demo.dto.Address
-import com.example.demo.dto.User
-import com.example.demo.repository.UserRepository
+import com.example.demo.cqrs.dto.Address
+import com.example.demo.cqrs.dto.User
+import com.example.demo.cqrs.repository.UserRepository
 import java.util.stream.Collectors
 
-import com.example.demo.dto.Contact
+import com.example.demo.cqrs.dto.Contact
 import java.util.function.Predicate
 
 

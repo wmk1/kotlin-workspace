@@ -1,4 +1,4 @@
-package com.example.demo.controller
+package com.example.demo.cqrs.controller
 
 import org.springframework.http.ResponseEntity
 import org.springframework.kafka.core.KafkaTemplate
